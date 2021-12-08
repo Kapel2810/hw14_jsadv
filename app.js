@@ -54,23 +54,30 @@ productsById.set(1024, 'Chease')
 
 const runCode = () => {
 
-    for(let product of productsById){
-        console.log(productsById.keys())
+    for(let product of productsById.keys()){
+        console.log(product)
     }
-    for (let product of productsById){
-        console.log(productsById.values())
+    for (let product of productsById.values()){
+        console.log(product)
     }
     for(let[key, value] of productsById.entries()) {
         console.log(key,value)
     }
-    if (productsById.has (7)){
-          console.log('great')
-    }else{
-        alert('the product 7 doesnt exist')
-    }
+//     if (productsById.has (7)){
+//           console.log('great')
+//     }else{
+//         alert('the product 7 doesnt exist')
+//     }
 
-    if(productsById.has(3)){
-        console.log('great product')
-    }
+//     if(productsById.has(3)){
+//         console.log('great product')
+//     }
 
 }
+
+//////////////////////////////////////
+//------------ ex 4---------
+
+
+// let carsIdList = new Map()
+
