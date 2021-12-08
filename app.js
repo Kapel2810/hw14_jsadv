@@ -25,18 +25,52 @@
 //////////////////////////////////////////
 //-------------ex2---------------
 
-let userNameList = new Set()
+// let userNameList = new Set()
 
 
-userNameList.add(prompt('please enter your username'))
-userNameList.add(prompt('please enter your username'))
-userNameList.add(prompt('please enter your username'))
-userNameList.add(prompt('please enter your username'))
-userNameList.add(prompt('please enter your username'))
+// userNameList.add(prompt('please enter your username'))
+// userNameList.add(prompt('please enter your username'))
+// userNameList.add(prompt('please enter your username'))
+// userNameList.add(prompt('please enter your username'))
+// userNameList.add(prompt('please enter your username'))
 
-const runCode = ( )=> {
-    for(let userName of userNameList){
-        console.log(userName)
-    } 
-    console.log(userNameList.size)
+// const runCode = ( )=> {
+//     for(let userName of userNameList){
+//         console.log(userName)
+//     } 
+//     console.log(userNameList.size)
+// }
+
+/////////////////////////////////////
+//----------ex 3------------
+
+let productsById = new Map()
+
+productsById.set(1020, 'Milk')
+productsById.set(1021, 'Bread')
+productsById.set(1022, 'Banana')
+productsById.set(1023, 'Cream')
+productsById.set(1024, 'Chease')
+
+const runCode = () => {
+
+    for(let product of productsById){
+        console.log(productsById.keys())
+    }
+    for (let product of productsById){
+        console.log(productsById.values())
+    }
+    for(let[key, value] of productsById.entries()) {
+        console.log(key,value)
+    }
+    if (productsById.has (7)){
+          console.log('great')
+    }else{
+        alert('the product 7 doesnt exist')
+    }
+
+    if(productsById.has(3)){
+        console.log('great product')
+    }
+
 }
