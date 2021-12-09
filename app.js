@@ -44,25 +44,25 @@
 /////////////////////////////////////
 //----------ex 3------------
 
-let productsById = new Map()
+// let productsById = new Map()
 
-productsById.set(1020, 'Milk')
-productsById.set(1021, 'Bread')
-productsById.set(1022, 'Banana')
-productsById.set(1023, 'Cream')
-productsById.set(1024, 'Chease')
+// productsById.set(1020, 'Milk')
+// productsById.set(1021, 'Bread')
+// productsById.set(1022, 'Banana')
+// productsById.set(1023, 'Cream')
+// productsById.set(1024, 'Chease')
 
-const runCode = () => {
+// const runCode = () => {
 
-    for(let product of productsById.keys()){
-        console.log(product)
-    }
-    for (let product of productsById.values()){
-        console.log(product)
-    }
-    for(let[key, value] of productsById.entries()) {
-        console.log(key,value)
-    }
+//     for(let product of productsById.keys()){
+//         console.log(product)
+//     }
+//     for (let product of productsById.values()){
+//         console.log(product)
+//     }
+//     for(let[key, value] of productsById.entries()) {
+//         console.log(key,value)
+//     }
 //     if (productsById.has (7)){
 //           console.log('great')
 //     }else{
@@ -73,7 +73,7 @@ const runCode = () => {
 //         console.log('great product')
 //     }
 
-}
+// }
 
 //////////////////////////////////////
 //------------ ex 4---------
@@ -81,3 +81,74 @@ const runCode = () => {
 
 // let carsIdList = new Map()
 
+// let car = {
+//     carId: 1098,
+//     manufactory: "Mazda",
+//     molel: "3",
+//     year: 2011
+// }
+
+//////////////////////////////////
+//-----arrays----------
+//----ex 1 ------
+
+let numbers = [20, 10, 25, 89, 56, 53, 91, 34, 27, 93, 23, 12, 9, 67, 85, 13, 46, 74, 96, 71]
+
+const runCode = () => {
+
+    // א
+    numbers.forEach((number) => console.log(number))
+
+    // ב
+        let value
+        value = numbers.find((number)=> number >10)
+        console.log(value)
+
+    // ג
+    let value 
+    value = numbers.find((number) => number>=50)
+    console.log(value)
+
+    // ד
+    let value
+    value = numbers.find((number) => { return number % 2 !== 0})
+    console.log(value)
+
+    // ה
+    let value 
+    value =  numbers.filter((number)=> number>50)
+    console.log(value)
+
+    // ו
+    let value
+    value = numbers.findIndex(number => number >50)
+    console.log(value)
+
+    // ז
+    let evenNumbers = []
+    evenNumbers = numbers.map(number => number % 2 === 0)
+    console.log(evenNumbers)
+
+    // ח
+    let value
+    value= numbers.reduce((prev, item)=> {
+         if(prev<item){
+             return item
+         }else{
+             return prev
+         }
+    },0)
+    console.log(value)
+
+    // ט
+    let value
+    value = numbers.reduce((prev, item)=>{
+        if (prev> item){
+            return item
+        } else {
+            return prev
+        }
+
+    })
+    console.log(value)
+}
