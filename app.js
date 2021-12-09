@@ -92,63 +92,156 @@
 //-----arrays----------
 //----ex 1 ------
 
-let numbers = [20, 10, 25, 89, 56, 53, 91, 34, 27, 93, 23, 12, 9, 67, 85, 13, 46, 74, 96, 71]
+// let numbers = [20, 10, 25, 89, 56, 53, 91, 34, 27, 93, 23, 12, 9, 67, 85, 13, 46, 74, 96, 71]
 
+// const runCode = () => {
+
+//     // א
+//     numbers.forEach((number) => console.log(number))
+
+//     // ב
+//         let value
+//         value = numbers.find((number)=> number >10)
+//         console.log(value)
+
+//     // ג
+//     let value 
+//     value = numbers.find((number) => number>=50)
+//     console.log(value)
+
+//     // ד
+//     let value
+//     value = numbers.find((number) => { return number % 2 !== 0})
+//     console.log(value)
+
+//     // ה
+//     let value 
+//     value =  numbers.filter((number)=> number>50)
+//     console.log(value)
+
+//     // ו
+//     let value
+//     value = numbers.findIndex(number => number >50)
+//     console.log(value)
+
+//     // ז
+//     let evenNumbers = []
+//     evenNumbers = numbers.map(number => number % 2 === 0)
+//     console.log(evenNumbers)
+
+//     // ח
+//     let value
+//     value= numbers.reduce((prev, item)=> {
+//          if(prev<item){
+//              return item
+//          }else{
+//              return prev
+//          }
+//     },0)
+//     console.log(value)
+
+//     // ט
+//     let value
+//     value = numbers.reduce((prev, item)=>{
+//         if (prev> item){
+//             return item
+//         } else {
+//             return prev
+//         }
+
+//     })
+//     console.log(value)
+// }
+
+////////////////////////////////
+//-------- ex 2 --------------
+
+let pointPositionList = [
+    { x: 25, y: 40 },
+    { x: 83, y: 30 },
+    { x: 7, y: 14 },
+    { x: 26, y: 88 },
+    { x: 2, y: 38 },
+    { x: 53, y: 89 },
+    { x: 29, y: 52 },
+    { x: 38, y: 94 },
+    { x: 77, y: 79 },
+    { x: 54, y: 90 },
+    { x: 19, y: 85 },
+    { x: 1, y: 91 },
+    { x: 63, y: 48 },
+    { x: 100, y: 38 },
+    { x: 70, y: 52 },
+    { x: 6, y: 18 },
+    { x: 48, y: 99 },
+    { x: 41, y: 20 },
+    { x: 97, y: 74 },
+    { x: 73, y: 95 }]
+
+const getRandomNumber = (min, max) => {
+
+    let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
+    return randomNumber
+}
 const runCode = () => {
 
-    // א
-    numbers.forEach((number) => console.log(number))
 
-    // ב
-        let value
-        value = numbers.find((number)=> number >10)
-        console.log(value)
+    for (let i = 0; i < 20; i++) {
+        let xPosition = getRandomNumber(1, 100)
+        let yPosition = getRandomNumber(1, 100)
+        let position = {
+            x: xPosition,
+            y: yPosition
+        }
+        pointPositionList.push(position)
 
-    // ג
-    let value 
-    value = numbers.find((number) => number>=50)
-    console.log(value)
+    }
 
-    // ד
-    let value
-    value = numbers.find((number) => { return number % 2 !== 0})
-    console.log(value)
+    console.log(pointPositionList)
 
-    // ה
-    let value 
-    value =  numbers.filter((number)=> number>50)
-    console.log(value)
 
-    // ו
-    let value
-    value = numbers.findIndex(number => number >50)
-    console.log(value)
+    א
+    let alef = pointPositionList.forEach(object =>console.log(object))
+    console.log(alef)
 
-    // ז
-    let evenNumbers = []
-    evenNumbers = numbers.map(number => number % 2 === 0)
-    console.log(evenNumbers)
+    ב
 
-    // ח
-    let value
-    value= numbers.reduce((prev, item)=> {
-         if(prev<item){
-             return item
-         }else{
-             return prev
-         }
-    },0)
-    console.log(value)
+    let bet = pointPositionList.find(position => position.x >position.y)
+    console.log(bet)
 
-    // ט
-    let value
-    value = numbers.reduce((prev, item)=>{
-        if (prev> item){
-            return item
-        } else {
+    ג
+     let gimel = pointPositionList.find(position => position.y>50)
+     console.log(gimel)
+
+    ד
+    let dalet = pointPositionList.filter(position => position.x %2===0)
+    console.log(dalet)
+
+    ה
+    let hey = pointPositionList.filter( position => position.y>50)
+    console.log(hey)
+
+    ו
+    let vav = pointPositionList.findIndex(position => position.x >50)
+    console.log(vav)
+
+    ז
+    let zayn = pointPositionList.map(position => position)
+    console.log(zayn)
+
+    ח
+    let chet = pointPositionList.reduce((prev, position)=>{
+        if(prev>position.x){
+            return position.x
+        }else {
             return prev
         }
-
     })
-    console.log(value)
+    console.log(chet)
 }
+
+
+
+
+
+
